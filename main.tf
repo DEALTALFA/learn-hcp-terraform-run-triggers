@@ -22,8 +22,8 @@ resource "aws_instance" "app_server" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
 
-  vpc_security_group_ids = "sg-997301bd"
-  subnet_id              = ["subnet-5f7ed72"]
+  vpc_security_group_ids = ["sg-997301bd"]
+  subnet_id              = "subnet-5f7ed72"
 
   tags = {
     Name = var.instance_name
