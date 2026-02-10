@@ -13,10 +13,10 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-data "tfe_outputs" "source_workspace" {
-  workspace    = var.workspace_name
-  organization = var.organization_name
-}
+#data "tfe_outputs" "source_workspace" {
+#  workspace    = var.workspace_name
+#  organization = var.organization_name
+#}
 
 resource "aws_instance" "app_server" {
   ami           = data.aws_ami.ubuntu.id
