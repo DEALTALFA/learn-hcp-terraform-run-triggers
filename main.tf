@@ -23,7 +23,7 @@ resource "aws_instance" "app_server" {
   instance_type = var.instance_type
 
   vpc_security_group_ids = ["sg-997301bd"]
-  subnet_id              = "subnet-5f7ed72"
+  subnet_id              = "subnet-5f7ed727"
 
   tags = {
     Name = var.instance_name
